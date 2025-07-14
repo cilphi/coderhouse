@@ -18,12 +18,12 @@
     <header class="container-fluid"> <!--Se usó Navbar de Bootstrap-->
         <nav class="container-fluid navbar navbar-expand-lg navbar-light ">
             <div class="container-fluid">
-                <a class="navbar-brand" href="../index.html"><img src="../assets/imgs/logo-header.png" alt="Logo"></a>
+                <a class="navbar-brand" href="../index.html"><img src="../assets/imgs/logo-ludussus-header.png" alt="Logo"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse container-fluid" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <ul class="navbar-nav container-fluid mb-2 mb-lg-0">
                         <li class="nav-item">
                         <a class="nav-link" href="conocenos.html">Conócenos</a>
                         </li>
@@ -36,7 +36,8 @@
                         <li class="nav-item">
                         <a class="nav-link" href="tienda.html">Tienda</a>
                         </li>
-                        <li class="nav-item dropdown"> <!--Cuenta de usuario-->
+                        <ul class="d-flex">
+                            <li class="nav-item dropdown"> <!--Cuenta de usuario-->
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             <img src="../assets/imgs/user-icon.png" alt="Menú de Usuario">
                         </a>
@@ -59,21 +60,22 @@
                             </div>
                             <button type="submit" class="btn btn-success">Ingresa</button>
                         </form>
-                        </li>
-                        <li class="nav-item dropdown"> <!--Carro de compras-->
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <img src="../assets/imgs/cart-icon.png" alt="Menú de Usuario">
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li class="dropdown-item">Estamos haciendo inventario</li>
-                            <li><hr class="dropdown-divider"></li>
-                            <li class="dropdown-item">Volveremos con más productos</li>
+                            </li>
+                            <li class="nav-item dropdown"> <!--Carro de compras-->
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <img src="../assets/imgs/cart-icon.png" alt="Menú de Usuario">
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li class="dropdown-item">Estamos haciendo inventario</li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li class="dropdown-item">Volveremos con más productos</li>
+                            </ul>
+                            </li>
+                            <form class="d-flex"> <!--Barra buscadora-->
+                                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                                <button class="btn btn-outline-success" type="submit">Busca</button>
+                            </form>
                         </ul>
-                        </li>
-                        <form class="d-flex"> <!--Barra buscadora-->
-                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                            <button class="btn btn-outline-success" type="submit">Busca</button>
-                        </form>
                     </ul>
                 </div>
             </div>
@@ -87,43 +89,42 @@
         </section>        
         <section class="card-video-box"> <!--Card Videos-->            
             <div class="card-video"> <!--Video en Reproducción-->
-                <h2>Título</h2>
-                <h6>Subtítulo</h6>
-                <video src="" controls>Video destacado del mes</video>
-                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit magna interdum eu. Curabitur pellentesque nibh nibh, at maximus ante fermentum sit amet. Pellentesque commodo lacus at sodales sodales. Quisque sagittis orci ut diam condimentum, vel euismod erat placerat. In iaculis arcu eros, eget tempus orci facilisis id. Praesent lorem orci, mattis non efficitur id, ultricies vel nibh. Sed volutpat lacus vitae gravida viverra. Fusce vel tempor elit. Proin tempus,.</p>
+                <h2>Cómo se juega - Virus!</h2>
+                <h6>El juego de mesa más contagioso</h6>
+                <div class="ratio ratio-16x9">
+                    <iframe src="https://www.youtube.com/embed/knf9MqQoif0?si=2uw0ELFtuOJcaQvH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <p>En el hospital Nuestra Señora de Tranjis, un error de los novatos del laboratorio ha provocado que varias muestras de virus experimentales campen a sus anchas por el centro. ¡Solo tú puedes detenerlos!</p>
             </div>            
             <div class="card-video2"> <!--Barra Videos sugeridos-->
                 <div> <!--Filtros de video-->
-                    <ul class="nav nav-pills gap-2">
-                    <li class="active">
-                        <a data-toggle="tab" href="#recomendacion1">Pill 1</a>
-                    </li>
-                    <li class="inactive">
-                        <a data-toggle="tab" href="#recomendacion2">Pill 2</a>
-                    </li>
-                    <li class="inactive recomendacion3">
-                        <a data-toggle="tab" href="#recomendacion3">Pill 3</a>
-                    </li>
+                    <h1 class="span">Videos Sugeridos</h1>
                 </ul>
                 </div>                
                 <div class="video-sidebar"> <!--Videos sugeridos-->
                     <div class="card-video-thumbnail"> <!--Video 1-->
-                    <h2>Video 1</h2>
-                    <h6>Subtítulo</h6>
-                    <video src="" controls>Video destacado del mes</video>
-                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit magna interdum eu. Curabitur pellentesque nibh nibh, at maximus ante fermentum sit amet. Pellentesque commodo lacus at sodales sodales. Quisque sagittis orci ut diam condimentum, vel euismod erat placerat. In iaculis arcu eros, eget tempus orci facilisis id. Praesent lorem orci, mattis non efficitur id, ultricies vel nibh. Sed volutpat lacus vitae gravida viverra. Fusce vel tempor elit. Proin tempus,.</p>
+                    <h3>Cómo Jugar: Azul</h3>
+                    <h6>Tutorial Corto y Preciso</h6>
+                    <div class="ratio ratio-16x9">
+                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/urpt0PQfIaw?si=iK_Z7lsog0TjJk-3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <p>Volviendo con una sección característica del canal, llega el tutorial Corto y Preciso del Spiel des Jahres del 2018: Azul. La versión anterior de este video presentaba algunas fallas técnicas y dejaba algunas cosas del lado, por lo que me pareció pertinente volver a grabarlo con lo aprendido en estos años.</p>
                 </div>                
                 <div class="card-video-thumbnail"> <!--Video 2-->
-                    <h2>Video 2</h2>
-                    <h6>Subtítulo</h6>
-                    <video src="" controls>Video destacado del mes</video>
-                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit magna interdum eu. Curabitur pellentesque nibh nibh, at maximus ante fermentum sit amet. Pellentesque commodo lacus at sodales sodales. Quisque sagittis orci ut diam condimentum, vel euismod erat placerat. In iaculis arcu eros, eget tempus orci facilisis id. Praesent lorem orci, mattis non efficitur id, ultricies vel nibh. Sed volutpat lacus vitae gravida viverra. Fusce vel tempor elit. Proin tempus,.</p>
+                    <h3>PELUSAS</h3>
+                    <h6>Cómo se juega</h6>
+                    <div class="ratio ratio-16x9">
+                        <iframe src="https://www.youtube.com/embed/-dkeGwyNfoE?si=5x-xmY2pmd5EnveQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <p>A las pelusas les encanta ir acumulándose, pero cualquier corriente de aire puede hacer que desaparezcan en un momento...Acumula pelusas para conseguir puntos, pero no cojas demasiadas o ¡puedes perder todas tus ganancias! Roba cartas para conseguir puntos y decide si parar... o seguir robando otra carta.</p>
                 </div>                
                 <div class="card-video-thumbnail"> <!--Video 3-->
-                    <h2>Video 3</h2>
-                    <h6>Subtítulo</h6>
-                    <video src="" controls>Video destacado del mes</video>
-                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit magna interdum eu. Curabitur pellentesque nibh nibh, at maximus ante fermentum sit amet. Pellentesque commodo lacus at sodales sodales. Quisque sagittis orci ut diam condimentum, vel euismod erat placerat. In iaculis arcu eros, eget tempus orci facilisis id. Praesent lorem orci, mattis non efficitur id, ultricies vel nibh. Sed volutpat lacus vitae gravida viverra. Fusce vel tempor elit. Proin tempus,.</p>
+                    <h3>Cómo se juega a 7 WONDERS</h3>
+                    <h6> TUTORIAL</h6>
+                    <div class="ratio ratio-16x9">
+                        <iframe src="https://www.youtube.com/embed/onJ4vsu1GtI?si=4wyny0zfdDxPGogd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <p>En 7 Wonders el azar designa el tablero de la Maravilla con el que vas a jugar, cualquiera te va a gustar, todos tienen unos diseños sublimes, no tendrás preferencia por ninguno.</p>
                 </div>
                 </div>
             </div>
@@ -131,12 +132,12 @@
     </main>
     <footer> <!--Footer-->
         <section> <!--Logo y Redes--> 
-            <a href="../index.html"><img src="../assets/imgs/logo footer.png" alt="Logo"></a>
+            <a href="../index.html"><img src="../assets/imgs/logo-ludussus-footer.png" alt="Logo"></a>
             <div class="redes">
-                <img src="../assets/imgs/icon-tiktok.png" alt="Tik-Tok">
-                <img src="../assets/imgs/icon-facebook.png" alt="Facebook">
-                <img src="../assets/imgs/icon-whatsapp.png" alt="Whatsapp">
-                <img src="../assets/imgs/icons-insta.png" alt="Instagram">
+                <a target="_blank" href="https://www.tiktok.com/es/"><img src="../assets/imgs/icon-tiktok.png" alt="Tik-Tok"></a>
+                <a target="_blank" href="https://www.facebook.com/"><img src="../assets/imgs/icon-facebook.png" alt="Facebook"></a>
+                <a target="_blank" href="https://www.whatsapp.com/"><img src="../assets/imgs/icon-whatsapp.png" alt="Whatsapp"></a>
+                <a target="_blank" href="https://www.instagram.com/"><img src="../assets/imgs/icons-insta.png" alt="Instagram"></a>
             </div>
         </section>
         <section class="container-fluid"> <!--Accesos Directos-->
@@ -148,7 +149,7 @@
                 <li><a href="videoteca.html">Videoteca</a></li>
                 <li><a href="videoteca.html#videodestacado">Destacado</a></li>
                 <li><a href="tienda.html">Tienda</a></li>
-                <li><a href="tienda.html#terminos">Términos y Condiciones</a></li>
+                <li><a href="terminos.html">Términos y Condiciones</a></li>
             </ul>
         </section>
         <form class="mb-3">

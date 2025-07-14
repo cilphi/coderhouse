@@ -18,12 +18,12 @@
     <header class="container-fluid"> <!--Se usó Navbar de Bootstrap-->
         <nav class="container-fluid navbar navbar-expand-lg navbar-light ">
             <div class="container-fluid">
-                <a class="navbar-brand" href="../index.html"><img src="../assets/imgs/logo-header.png" alt="Logo"></a>
+                <a class="navbar-brand" href="../index.html"><img src="../assets/imgs/logo-ludussus-header.png" alt="Logo"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse container-fluid" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <ul class="navbar-nav container-fluid mb-2 mb-lg-0">
                         <li class="nav-item">
                         <a class="nav-link" href="conocenos.html">Conócenos</a>
                         </li>
@@ -36,7 +36,8 @@
                         <li class="nav-item">
                         <a class="nav-link" href="tienda.html">Tienda</a>
                         </li>
-                        <li class="nav-item dropdown"> <!--Cuenta de usuario-->
+                        <ul class="d-flex">
+                            <li class="nav-item dropdown"> <!--Cuenta de usuario-->
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             <img src="../assets/imgs/user-icon.png" alt="Menú de Usuario">
                         </a>
@@ -59,83 +60,155 @@
                             </div>
                             <button type="submit" class="btn btn-success">Ingresa</button>
                         </form>
-                        </li>
-                        <li class="nav-item dropdown"> <!--Carro de compras-->
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <img src="../assets/imgs/cart-icon.png" alt="Menú de Usuario">
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li class="dropdown-item">Estamos haciendo inventario</li>
-                            <li><hr class="dropdown-divider"></li>
-                            <li class="dropdown-item">Volveremos con más productos</li>
+                            </li>
+                            <li class="nav-item dropdown"> <!--Carro de compras-->
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <img src="../assets/imgs/cart-icon.png" alt="Menú de Usuario">
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li class="dropdown-item">Estamos haciendo inventario</li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li class="dropdown-item">Volveremos con más productos</li>
+                            </ul>
+                            </li>
+                            <form class="d-flex"> <!--Barra buscadora-->
+                                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                                <button class="btn btn-outline-success" type="submit">Busca</button>
+                            </form>
                         </ul>
-                        </li>
-                        <form class="d-flex"> <!--Barra buscadora-->
-                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                            <button class="btn btn-outline-success" type="submit">Busca</button>
-                        </form>
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
-    <main class="d-grid">         
+    <main class="d-grid">
         <section class="breadcrumb"> <!--Breadcrumb-->
             <a href="../index.html">Ludussus</a>
             <img src="../assets/imgs/icon-arrow-right.png" alt="Flecha hacia la derecha">
             <a href="biblioteca.html">Biblioteca</a>
         </section>
         <section class="card-box">
-            <ul class="nav nav-pills gap-2">
-                <li class="active">
-                    <a data-toggle="tab" href="#recomendacion1">Pill 1</a>
+            <ul class="nav nav-tabs gap-2" id="myTab" role="tablist">
+                <li class="nav-item " role="presentation">
+                    <button class="nav-link" id="recomendacion3-tab" data-bs-toggle="tab" data-bs-target="#recomendacion3" type="button" role="tab" aria-controls="recomendacion3" aria-selected="true">Biblioteca</button>
+                    
                 </li>
-                <li class="inactive">
-                    <a data-toggle="tab" href="#recomendacion2">Pill 2</a>
+                <li class="nav-item active" role="presentation">
+                    <button class="nav-link" id="recomendacion1-tab" data-bs-toggle="tab" data-bs-target="#recomendacion1" type="button" role="tab" aria-controls="recomendacion1" aria-selected="true">Bosque de Sombras</button>
+                    
                 </li>
-                <li class="inactive">
-                    <a data-toggle="tab" href="#recomendacion3">Pill 3</a>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="recomendacion2-tab" data-bs-toggle="tab" data-bs-target="#recomendacion2" type="button" role="tab" aria-controls="recomendacion2" aria-selected="true">Dominio de los Pilares</button>
+                    
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="recomendacion4-tab" data-bs-toggle="tab" data-bs-target="#recomendacion4" type="button" role="tab" aria-controls="recomendacion4" aria-selected="true">Flash Market</button>
+                    
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="recomendacion5-tab" data-bs-toggle="tab" data-bs-target="#recomendacion5" type="button" role="tab" aria-controls="recomendacion5" aria-selected="true">Torre de Problemas</button>
+                    
                 </li>
             </ul>
-            <div class="tab-content">
-                <div id="recomendacion1" class="tab-pane fade show active" role="tabpanel">
-                    <h2>Recomendación 1</h2>
-                    <h6>Subtítulo</h6>
-                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit magna interdum eu. Curabitur pellentesque nibh nibh, at maximus ante fermentum sit amet. Pellentesque commodo lacus at sodales sodales. Quisque sagittis orci ut diam condimentum, vel euismod erat placerat. In iaculis arcu eros, eget tempus orci facilisis id. Praesent lorem orci, mattis non efficitur id, ultricies vel nibh. Sed volutpat lacus vitae gravida viverra. Fusce vel tempor elit. Proin tempus,.</p>
-                    <div style="align-self: center;">
-                        <img src="../assets/imgs/imagen-biblioteca-people.png" alt="Imagen que muestra los componentes del juego">
-                    </div>
-                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit magna interdum eu. Curabitur pellentesque nibh nibh, at maximus ante fermentum sit amet. Pellentesque commodo lacus at sodales sodales. Quisque sagittis orci ut diam condimentum, vel euismod erat placerat. In iaculis arcu eros, eget tempus orci facilisis id. Praesent lorem orci, mattis non efficitur id, ultricies vel nibh. Sed volutpat lacus vitae gravida viverra. Fusce vel tempor elit. Proin tempus,.</p>
+            <div class="tab-content" id="myTabContent">
+                <div id="recomendacion3" class="tab-pane fade" role="tabpanel" aria-labelledby="recomendacion3-tab">
+                    <div class="f">
+                        <div class="members"> <!--Miembros-->                
+                <div class="card-producto-content"> <!--Juego 1-->
+                    <img src="../assets/imgs/imagen-card-shadow-forest.jpg" alt="Imagen del juego Bosque de sombras"> <!-- Fuente de la imagen https://unsplash.com/photos/ a-black-and-white-photo-of-a-path-in-the-woods-RY8zYorcnhQ -->
+                    <h2>Bosque de sombras</h2>
+                    <h6>Estratégico</h6>
+                    <p>En Bosque de Sombras, de 2 a 5 jugadores se adentran en un bosque encantado que cambia con cada turno. Como guardianes de la luz, deberán colaborar para recolectar cristales solares, evitar trampas oscuras y enfrentarse a criaturas que emergen cuando cae la noche.</p>
+                </div>                
+                <div class="card-producto-content"> <!--Juego 2-->
+                    <img src="../assets/imgs/imagen-card-pilares.jpg" alt="Imagen del juego Dominio de los Pilares"> <!-- Fuente imagen https://unsplash.com/photos/a-group-of-columns-sitting-next-to-each-other-2GX90-us5u4 -->
+                    <h2>Dominio de los Pilares</h2>
+                    <h6>Control territorial</h6>
+                    <p>Los jugadores compiten por construir su civilización sobre un mapa modular que se transforma en cada era. El objetivo no es solo expandirse, sino hacerlo con equilibrio, previsión y eficiencia.</p>
+                </div>                
+                <div class="card-producto-content"> <!--Juego 3-->
+                    <img src="../assets/imgs/imagen-card-flash.jpg" alt="Imagen del juego Flash Market"> <!-- Fuente imagen https://unsplash.com/photos/graphical-user-interface-application-x07ELaNFt34 -->
+                    <h2>Flash Market: Juego de cartas</h2>
+                    <h6>Competitivo</h6>
+                    <p>¿Puedes leer el mercado, tomar decisiones en segundos y arriesgar todo por una jugada brillante? Flash Market te reta a hacerlo... en tiempo real.</p>
+                </div>                
+                <div class="card-producto-content"> <!--Juego 4-->
+                    <img src="../assets/imgs/imagen-card-torre.jpg" alt="Imagen que muestra el juego Torre de Problemas"> <!-- Fuente de la imagen https://unsplash.com/photos/a-close-up-of-a-sticker-on-a-pole-gt6elEFm39k -->
+                    <h2>Torre de Problemas</h2>
+                    <h6>Party game</h6>
+                    <p>¿Quién dijo que el caos no podía tener método? En Torre de Problemas, de 2 a 5 jugadores intentan construir una torre funcional... con piezas que tienen condiciones absurdas, efectos inesperados y reglas que cambian en mitad de la partida.</p>
                 </div>
-                <div id="recomendacion2" class="tab-pane fade" role="tabpanel">
-                    <h2>Recomendación 2</h2>
-                    <h6>Subtítulo</h6>
-                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit magna interdum eu. Curabitur pellentesque nibh nibh, at maximus ante fermentum sit amet. Pellentesque commodo lacus at sodales sodales. Quisque sagittis orci ut diam condimentum, vel euismod erat placerat. In iaculis arcu eros, eget tempus orci facilisis id. Praesent lorem orci, mattis non efficitur id, ultricies vel nibh. Sed volutpat lacus vitae gravida viverra. Fusce vel tempor elit. Proin tempus,.</p>
-                    <div style="align-self: center;">
-                        <img src="../assets/imgs/imagen-biblioteca-people.png" alt="Imagen que muestra los componentes del juego">
+            </div>
                     </div>
-                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit magna interdum eu. Curabitur pellentesque nibh nibh, at maximus ante fermentum sit amet. Pellentesque commodo lacus at sodales sodales. Quisque sagittis orci ut diam condimentum, vel euismod erat placerat. In iaculis arcu eros, eget tempus orci facilisis id. Praesent lorem orci, mattis non efficitur id, ultricies vel nibh. Sed volutpat lacus vitae gravida viverra. Fusce vel tempor elit. Proin tempus,.</p>
                 </div>
-                <div id="recomendacion3" class="tab-pane fade" role="tabpanel">
-                    <h2>Recomendación 3</h2>
-                    <h6>Subtítulo</h6>
-                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit magna interdum eu. Curabitur pellentesque nibh nibh, at maximus ante fermentum sit amet. Pellentesque commodo lacus at sodales sodales. Quisque sagittis orci ut diam condimentum, vel euismod erat placerat. In iaculis arcu eros, eget tempus orci facilisis id. Praesent lorem orci, mattis non efficitur id, ultricies vel nibh. Sed volutpat lacus vitae gravida viverra. Fusce vel tempor elit. Proin tempus,.</p>
+                <div id="recomendacion1" class="tab-pane fade show active" role="tabpanel" aria-labelledby="recomendacion1-tab">
+                    <div class="f">
+                        <h2>Recomendación de Julio: Bosque de Sombras</h2>
+                    <h6>Un juego de estrategia cooperativa y tensión narrativa</h6>
+                    <p>En Bosque de Sombras, de 2 a 5 jugadores se adentran en un bosque encantado que cambia con cada turno. Como guardianes de la luz, deberán colaborar para recolectar cristales solares, evitar trampas oscuras y enfrentarse a criaturas que emergen cuando cae la noche.</p>
                     <div style="align-self: center;">
-                        <img src="../assets/imgs/imagen-biblioteca-people.png" alt="Imagen que muestra los componentes del juego">
+                        <img src="../assets/imgs/imagen-biblioteca-shadow-forest.jpg" alt="Imagen que muestra una representación del título del juego Bosque de sombras"> <!-- Fuente de la imagen https://unsplash.com/photos/a-black-and-white-photo-of-a-path-in-the-woods-RY8zYorcnhQ -->
                     </div>
-                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit magna interdum eu. Curabitur pellentesque nibh nibh, at maximus ante fermentum sit amet. Pellentesque commodo lacus at sodales sodales. Quisque sagittis orci ut diam condimentum, vel euismod erat placerat. In iaculis arcu eros, eget tempus orci facilisis id. Praesent lorem orci, mattis non efficitur id, ultricies vel nibh. Sed volutpat lacus vitae gravida viverra. Fusce vel tempor elit. Proin tempus,.</p>
+                    <p>Lo que hace único a este juego es su sistema dinámico de tablero modular: cada loseta revela nuevos eventos y altera las condiciones del juego. La mecánica de "memoria compartida" obliga al grupo a comunicarse constantemente, porque si un jugador olvida un detalle clave… el bosque lo recordará por él.</p>
+                    <p>Ideal para jugadores que disfrutan de la tensión cooperativa, decisiones estratégicas y un toque de fantasía oscura. Y sí: trae fichas brillantes que se iluminan en la oscuridad.</p>
+                    <h6>Recomendado por: El Explorador Lúdico</h6>
+                    <p>"Lo abrí para probarlo... y terminé jugando cinco partidas seguidas. Todavía tengo el mapa del bosque en la cabeza."</p>
+                    </div>
+                </div>
+                <div id="recomendacion2" class="tab-pane fade" role="tabpanel" aria-labelledby="recomendacion2-tab">
+                    <div class="f">
+                        <h2> Recomendación de Junio: Dominio de los Pilares</h2>
+                        <h6>Un juego de construcción estratégica para mentes calculadoras</h6>
+                        <p>Dominio de los Pilares es un juego de control territorial, planificación a largo plazo y precisión matemática. De 2 a 4 jugadores compiten por construir su civilización sobre un mapa modular que se transforma en cada era. El objetivo no es solo expandirse, sino hacerlo con equilibrio, previsión y eficiencia.</p>
+                        <div style="align-self: center;">
+                            <img src="../assets/imgs/imagen-biblioteca-pilares.jpg" alt="Imagen que muestra una representación del título del juego Dominio de los pilares"> <!-- Fuente imagen https://unsplash.com/photos/a-group-of-columns-sitting-next-to-each-other-2GX90-us5u4 -->
+                        </div>
+                        <p>Cada jugador debe gestionar tres recursos clave —conocimiento, influencia y estructura— para erigir Pilares que sostendrán su dominio. Las acciones tienen costos ocultos y consecuencias que se revelan en fases posteriores, por lo que anticiparse es tan importante como actuar.</p>
+                        <p>La mecánica de programación de acciones, junto con un sistema de puntuación escalonada, premia la optimización y penaliza los errores de cálculo. Este no es un juego para quienes toman decisiones impulsivas.</p>
+                        <h6>Recomendado por: El Arquitecto</h6>
+                        <p>"Dominio de los Pilares recompensa a quienes piensan tres turnos adelante. Preciso, exigente y elegante. Lo jugué una vez y ya estoy diseñando mi próxima estrategia."</p>
+                    </div>
+                </div>
+                <div id="recomendacion4" class="tab-pane fade" role="tabpanel" aria-labelledby="recomendacion4-tab">
+                    <div class="f">
+                        <h2> Recomendación de Mayo: Flash Market</h2>
+                        <h6>Un juego veloz, competitivo y siempre cambiante</h6>
+                        <p>¿Puedes leer el mercado, tomar decisiones en segundos y arriesgar todo por una jugada brillante? Flash Market te reta a hacerlo... en tiempo real. En este juego de 3 a 6 jugadores, encarnas a un comerciante en una ciudad futurista donde los valores de los recursos cambian cada minuto. Literalmente.</p>
+                        <div style="align-self: center;">
+                            <img src="../assets/imgs/imagen-biblioteca-flash.jpg" alt="Imagen que muestra una representación del título del juego Flash Market"> <!-- Fuente imagen https://unsplash.com/photos/graphical-user-interface-application-x07ELaNFt34 -->
+                        </div>
+                        <p>Con partidas que duran entre 15 y 25 minutos, Flash Market es adrenalina pura: cartas con efecto inmediato, subastas relámpago, alianzas que duran un turno (o menos) y eventos sorpresa cada cinco rondas. No hay tiempo para largas planificaciones: aquí gana quien actúa con rapidez y se adapta al caos.</p>
+                        <p>Ideal para grupos que aman la competencia, el ritmo alto y los giros impredecibles.</p>
+                        <h6>Recomendado por: El Impulsor</h6>
+                        <p>"¡Es como hacer trading de recursos mientras corres por una montaña rusa! Y lo mejor: cada partida se siente distinta. Obligatorio para cualquier ludoteca que quiera estar al día."</p>
+                    </div>
+                </div>
+                <div id="recomendacion5" class="tab-pane fade" role="tabpanel" aria-labelledby="recomendacion5-tab">
+                    <div class="f">
+                        <h2> Recomendación de Abril: Torre de Problemas</h2>
+                        <h6>Un juego caótico, divertido y sorprendentemente estratégico</h6>
+                        <p>¿Quién dijo que el caos no podía tener método? En Torre de Problemas, de 2 a 5 jugadores intentan construir una torre funcional... con piezas que tienen condiciones absurdas, efectos inesperados y reglas que cambian en mitad de la partida.</p>
+                        <div style="align-self: center;">
+                            <img src="../assets/imgs/imagen-biblioteca-torre.jpg" alt="Imagen que muestra una representación del título del juego Torre de Problemas"> <!-- Fuente imagen https://unsplash.com/photos/a-close-up-of-a-sticker-on-a-pole-gt6elEFm39k -->
+                        </div>
+                        <p>Cada ronda, los jugadores roban cartas con “problemas”: desde piezas que deben colocarse con una sola mano, hasta reglas temporales como “nadie puede hablar” o “solo puedes construir si cantas”. Parece imposible, pero todo es cuestión de adaptarse y seguir adelante como si nada.</p>
+                        <p>Lo mejor es que, debajo del desorden aparente, hay una lógica que se puede dominar. Y quienes aprenden a surfear el caos… ganan.</p>
+                        <p>Perfecto para grupos que disfrutan del humor, las situaciones impredecibles y la satisfacción de resolver problemas de maneras poco convencionales.</p>
+                        <h6>Recomendado por: El Caos Eficiente</h6>
+                        <p>"Sí, tiré la torre en la primera ronda. También gané la partida. ¿Coincidencia? No lo creo."</p>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
     <footer> <!--Footer-->
         <section> <!--Logo y Redes--> 
-            <a href="../index.html"><img src="../assets/imgs/logo footer.png" alt="Logo"></a>
+            <a href="../index.html"><img src="../assets/imgs/logo-ludussus-footer.png" alt="Logo"></a>
             <div class="redes">
-                <img src="../assets/imgs/icon-tiktok.png" alt="Tik-Tok">
-                <img src="../assets/imgs/icon-facebook.png" alt="Facebook">
-                <img src="../assets/imgs/icon-whatsapp.png" alt="Whatsapp">
-                <img src="../assets/imgs/icons-insta.png" alt="Instagram">
+                <a target="_blank" href="https://www.tiktok.com/es/"><img src="../assets/imgs/icon-tiktok.png" alt="Tik-Tok"></a>
+                <a target="_blank" href="https://www.facebook.com/"><img src="../assets/imgs/icon-facebook.png" alt="Facebook"></a>
+                <a target="_blank" href="https://www.whatsapp.com/"><img src="../assets/imgs/icon-whatsapp.png" alt="Whatsapp"></a>
+                <a target="_blank" href="https://www.instagram.com/"><img src="../assets/imgs/icons-insta.png" alt="Instagram"></a>
             </div>
         </section>
         <section class="container-fluid"> <!--Accesos Directos-->
@@ -143,11 +216,11 @@
                 <li><a href="conocenos.html">Conócenos</a></li>
                 <li><a href="conocenos.html#members">Nuestro Equipo</a></li>
                 <li><a href="biblioteca.html">Biblioteca</a></li>
-                <li><a href="biblioteca.html#recomendaciones">Recomendaciones</a></li>
+                <li><a href="biblioteca.html#recomendacion1">Recomendaciones</a></li>
                 <li><a href="videoteca.html">Videoteca</a></li>
                 <li><a href="videoteca.html#videodestacado">Destacado</a></li>
                 <li><a href="tienda.html">Tienda</a></li>
-                <li><a href="tienda.html#terminos">Términos y Condiciones</a></li>
+                <li><a href="terminos.html">Términos y Condiciones</a></li>
             </ul>
         </section>
         <form class="mb-3">

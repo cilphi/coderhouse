@@ -4,46 +4,54 @@
     padding: 0;
     box-sizing: border-box;
 }
-/*Fuentes*/
-@font-face {
-    font-family: 'hgroup';
-    font-style: bold;
-    font-weight: 700;
-    src: url(akatab-bold.ttf) format('ttf');
-}
-@font-face {
-    font-family: 'text';
-    font-style: normal;
-    font-weight: 400;
-    src: url(chocolateclassicalsans-regular.ttf) format('ttf');
-}
 /*Elementos*/
 h1 {
-    font: 2.027rem 'hgroup';
+    font-family: "Akatab", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 2.027rem;
     color: #2E2D38;
 }
 h2 {
-    font: 1.807rem 'hgroup';
+    font-family: "Akatab", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1.807rem;
     color: #2E2D38;
 }
 h3 {
-    font: 1.602rem 'hgroup';
+    font-family: "Akatab", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1.602rem;
     color: #2E2D38;
 }
 h4 {
-    font: 1.424rem 'hgroup';
+    font-family: "Akatab", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1.424rem 'hgroup';
     color: #2E2D38;
 }
 h5 {
-    font: 1.266rem 'hgroup';
+    font-family: "Akatab", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1.266rem;
     color: #2E2D38;
 }
 h6 {
-    font: 1.125rem 'text';
+    font-family: "Chocolate Classical Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.125rem;
     color: #9B97B5;
 }
 p, a {
-    font: 1rem 'text';
+    font-family: "Chocolate Classical Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1rem;
     color: #3D3A58;
 }
 a {
@@ -56,14 +64,18 @@ li {
     padding: 8px 32px;
     border-radius: 16px;
     background-color: #37AD72;
+    border: #37AD72;
     color: #FCFCFE;
 }
 /*Header*/
 header {
     background-color: #ECEBF7;
 }
+header nav div div ul ul {
+    flex-direction: column;
+}
 /*Estado link y visited*/
-header nav div a:link, .breadcrumb a:link, footer section ul li a:link, header nav div a:visited, .breadcrumb a:visited, footer section ul li a:visited {
+.navbar-light .navbar-nav .nav-link:link, .breadcrumb a:link, footer section ul li a:link, main section article a:link, .navbar-light .navbar-nav .nav-link:visited, .breadcrumb a:visited, footer section ul li a:visited, main section article a:visited {
     color: #4537AD;
 }
 .card-index-content a:link, .card-index-content a:visited, .btn:visited, .card-producto-content a:link,  .card-producto-content a:visited {    
@@ -75,12 +87,12 @@ header nav div a:link, .breadcrumb a:link, footer section ul li a:link, header n
     color: #2E2D38;
 }
 /*Estado hover*/
-header nav div a:hover, .btn:hover, .breadcrumb a:hover, .card-index-content a:hover, .card-producto-content a:hover, .nav-pills li a:hover, footer section ul li a:hover {
+.navbar-light .navbar-nav .nav-link:hover, .btn:hover, .breadcrumb a:hover, .card-index-content a:hover, .card-producto-content a:hover, .nav-tabs li a:hover, footer section ul li a:hover,  main section article a:hover {
     background-color: #AD9D37;
     color: #FCFCFE;
 }
 /*Estado active*/
-.btn:active,.card-index-content a:active, .card-producto-content a:active, .nav-pills li a:active, .active, footer section ul li a:active {
+.navbar-light .navbar-nav .nav-link:active, .btn:active,.card-index-content a:active, .card-producto-content a:active, .nav-tabs li a:active, footer section ul li a:active,  main section article a:active {
     background-color: #AD6737;
     color: #FCFCFE;
 }
@@ -110,15 +122,22 @@ footer section ul li {
     display: flex;
     align-items: center;
     padding: 0 16px;
+    margin-bottom: 0;
 }
 main {
-    gap: 32px;
-    margin: 32px 0;
+    gap: 24px;
+    margin: 24px 0;
 }
-main section div p, .card-video p, .card-video-thumbnail p {
+.card-video-thumbnail p, .card-producto-info p {
     white-space: nowrap;
     overflow: hidden;
-    text-overflow: ellipsis;
+    text-overflow: clip;
+}
+.span {
+    background-image: linear-gradient(to right, #3D3A58, #4537AD, #37AD72);
+    background-size: cover;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 /*Card Página de Inicio*/
 /*Card*/
@@ -140,7 +159,7 @@ main section div p, .card-video p, .card-video-thumbnail p {
     padding: 16px 8px;
     border-radius: 0 0 20px 20px;
 }
-.card-index img, .card-index-content img, #recomendacion1 img, #recomendacion2 img, #recomendacion3 img, .card-video video, .card-video-thumbnail video, .card-producto-content img {
+.card-index img, .card-index-content img, #recomendacion1 img, #recomendacion2 img, #recomendacion3 img, #recomendacion4 img, #recomendacion5 img, .card-video iframe, .card-video-thumbnail video, .card-producto-content img {
     width: 100%;
 }
 .card-index-content {
@@ -155,7 +174,7 @@ main section div p, .card-video p, .card-video-thumbnail p {
     display: inline-block;
 }
 /*Página Conócenos*/
-#members, #card-producto { /*Formato Id Cajas*/
+#members, #card-producto, .members { /*Formato Id Cajas*/
     display: grid;
     grid-template-columns: 1fr;
     justify-content: space-around;
@@ -165,29 +184,46 @@ main section div p, .card-video p, .card-video-thumbnail p {
 }
 .f { /*Formato Id Cajas*/
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-around;
-    align-items: center;
+    align-items: flex-start;
     gap: 16px;
     padding: 0 16px;
 }
 /*Página Biblioteca*/
-.nav-pills li {
-    padding: 8px 32px;
+.nav-tabs, .nav-tabs .nav-link.active {
+    border-bottom: transparent;
+}
+.nav-tabs li {
+    padding: 8px 32px 0;
     border-radius: 16px 16px 0 0;
 }
-#recomendacion1 { /*Formato Id Tab*/
+.nav-tabs .nav-link.active { /*Formato Id Tab*/
     display: flex;
     flex-direction: column;
     gap: 16px;
     padding: 8px 16px;
-    border-radius: 0 0 20px 20px;
+    border-radius: 16px 16px 0 0;
+    border: #AD6737;
+    color: #FCFCFE;
+    background-color: #AD6737;
+}
+.nav-tabs .nav-link {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 8px 16px;
+    border-radius: 16px 16px 0 0;
+    border-bottom: #AD6737;
+    color: #3D3A58;
+    background-color: #ECEBF7;
+}
+#recomendacion1, #recomendacion2, #recomendacion3, #recomendacion4, #recomendacion5 { /*Formato Id Tab*/
+    padding: 8px 16px;
+    border-radius: 20px;
     border: 2px solid #AD6737;
     background-color: #FCFCFE;
-}
-#recomendacion2, #recomendacion3 {
-    display: none;
 }
 /*Card Página Videoteca*/
 .card-video-box {    
@@ -200,7 +236,7 @@ main section div p, .card-video p, .card-video-thumbnail p {
     flex-direction: column;
     gap: 16px;
     padding: 16px;
-    max-height: 480px;
+    max-height: 576px;
     overflow-y: scroll;
 }
 .card-video-thumbnail, .card-producto-id {
@@ -212,7 +248,7 @@ main section div p, .card-video p, .card-video-thumbnail p {
 .card-producto-content {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
     gap: 8px;
 }
 .card-producto-content a {
@@ -231,13 +267,21 @@ main section div p, .card-video p, .card-video-thumbnail p {
     align-items: center;
     padding: 8px 0;
 }
+a.disabled:link, a.disabled:visited, a.disabled:hover, a.disabled:active {
+    background-color: #ECEBF7;
+    color: #4D4C5B;
+}
+/*Página Términos y Condiciones*/
+main section article ul li {
+    list-style: square;
+}
+
 /* Media query para tabletas */
 @media (min-width: 600px) {
-    #members, #card-producto { /*Formato Id Cajas*/
+    #members, #card-producto, .members { /*Formato Id Cajas*/
         grid-template-columns: repeat(2, 1fr);
     }
-    #recomendacion1 p {
-        display: block;
+    .card-producto-info p {
         white-space: wrap;
     }
     footer {
@@ -246,6 +290,14 @@ main section div p, .card-video p, .card-video-thumbnail p {
 }
 /* Media query para computadoras de escritorio */
 @media (min-width: 1024px) {   
+    .navbar-nav {
+        display: flex;
+        justify-content: space-around;
+    }
+    header nav div div ul ul {
+        flex-direction: row;
+        gap: 8px;
+    }
     .dropdown-menu {
         width: 300px;
     }
@@ -255,20 +307,17 @@ main section div p, .card-video p, .card-video-thumbnail p {
     main section div p {
     white-space: wrap;
     }
-    #members, #card-producto { /*Formato Id Cajas*/
+    #members, #card-producto, .members { /*Formato Id Cajas*/
         grid-template-columns: repeat(4, 1fr);
     }
     .card-video-box {
         flex-direction: row;
-}
-    .card-video {
-        width: 70%;
     }
-    
+    iframe {
+        display: flex;
+        height: 100%;
+    }
     .card-video2 {
         width: 25%;
-    }
-    .nav-pills .recomendacion3 {
-        display: none;
     }
 }

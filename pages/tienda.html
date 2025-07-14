@@ -18,12 +18,12 @@
     <header class="container-fluid"> <!--Se usó Navbar de Bootstrap-->
         <nav class="container-fluid navbar navbar-expand-lg navbar-light ">
             <div class="container-fluid">
-                <a class="navbar-brand" href="../index.html"><img src="../assets/imgs/logo-header.png" alt="Logo"></a>
+                <a class="navbar-brand" href="../index.html"><img src="../assets/imgs/logo-ludussus-header.png" alt="Logo"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse container-fluid" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <ul class="navbar-nav container-fluid mb-2 mb-lg-0">
                         <li class="nav-item">
                         <a class="nav-link" href="conocenos.html">Conócenos</a>
                         </li>
@@ -36,7 +36,8 @@
                         <li class="nav-item">
                         <a class="nav-link" href="tienda.html">Tienda</a>
                         </li>
-                        <li class="nav-item dropdown"> <!--Cuenta de usuario-->
+                        <ul class="d-flex">
+                            <li class="nav-item dropdown"> <!--Cuenta de usuario-->
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             <img src="../assets/imgs/user-icon.png" alt="Menú de Usuario">
                         </a>
@@ -59,21 +60,22 @@
                             </div>
                             <button type="submit" class="btn btn-success">Ingresa</button>
                         </form>
-                        </li>
-                        <li class="nav-item dropdown"> <!--Carro de compras-->
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <img src="../assets/imgs/cart-icon.png" alt="Menú de Usuario">
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li class="dropdown-item">Estamos haciendo inventario</li>
-                            <li><hr class="dropdown-divider"></li>
-                            <li class="dropdown-item">Volveremos con más productos</li>
+                            </li>
+                            <li class="nav-item dropdown"> <!--Carro de compras-->
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <img src="../assets/imgs/cart-icon.png" alt="Menú de Usuario">
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li class="dropdown-item">Estamos haciendo inventario</li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li class="dropdown-item">Volveremos con más productos</li>
+                            </ul>
+                            </li>
+                            <form class="d-flex"> <!--Barra buscadora-->
+                                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                                <button class="btn btn-outline-success" type="submit">Busca</button>
+                            </form>
                         </ul>
-                        </li>
-                        <form class="d-flex"> <!--Barra buscadora-->
-                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                            <button class="btn btn-outline-success" type="submit">Busca</button>
-                        </form>
                     </ul>
                 </div>
             </div>
@@ -89,65 +91,65 @@
         <section id="card-producto"> <!--Card Tienda-->           
             <div class="card-producto-content"> <!--Card 1-->                
                 <div class="card-producto-id"> <!--Identificador-->
-                    <h2>Card 1</h2>
-                    <h6>Subtítulo</h6>
-                    <img src="../assets/imgs/imagen-producto.png" alt="Imagen del producto en venta">
-                </div>                
+                    <h2>Bosque de sombras</h2>
+                    <h6>Estratégico</h6>
+                    <img src="../assets/imgs/imagen-card-shadow-forest.jpg" alt="Imagen del juego Bosque de sombras">
+                </div> <!-- Fuente de la imagen https://unsplash.com/photos/ a-black-and-white-photo-of-a-path-in-the-woods-RY8zYorcnhQ -->
                 <div class="card-producto-info"> <!--Información-->
                     <div class="card-producto-precio">
-                        <h5>Precio</h5>
-                        <a href="tienda.html">Ver más</a>
+                        <h5>CLP $45000</h5>
+                        <a class="disabled" href="tienda.html">Sin stock</a>
                     </div>
                     <p>
-                        Leyenda...
+                        En Bosque de Sombras, de 2 a 5 jugadores se adentran en un bosque encantado que cambia con cada turno. Como guardianes de la luz, deberán colaborar para recolectar cristales solares, evitar trampas oscuras y enfrentarse a criaturas que emergen cuando cae la noche.
                     </p>
                 </div>
             </div>            
             <div class="card-producto-content"> <!--Card 2-->                
                 <div class="card-producto-id"> <!--Identificador-->
-                    <h2>Card 2</h2>
-                    <h6>Subtítulo</h6>
-                    <img src="../assets/imgs/imagen-producto.png" alt="Imagen del producto en venta">
-                </div>                
+                    <h2>Dominio de los Pilares</h2>
+                    <h6>Control territorial</h6>
+                    <img src="../assets/imgs/imagen-card-pilares.jpg" alt="Imagen del juego Dominio de los Pilares">
+                </div> <!-- Fuente imagen https://unsplash.com/photos/a-group-of-columns-sitting-next-to-each-other-2GX90-us5u4 -->
                 <div class="card-producto-info"> <!--Información-->
                     <div class="card-producto-precio">
-                        <h5>Precio</h5>
-                        <a href="tienda.html">Ver más</a>
+                        <h5>CLP $80000</h5>
+                        <a class="disabled" href="tienda.html">Sin stock</a>
                     </div>
                     <p>
-                        Leyenda...
+                        Los jugadores compiten por construir su civilización sobre un mapa modular que se transforma en cada era. El objetivo no es solo expandirse, sino hacerlo con equilibrio, previsión y eficiencia.
                     </p>
                 </div>
             </div>            
             <div class="card-producto-content"> <!--Card 3-->                
                 <div class="card-producto-id"> <!--Identificador-->
-                    <h2>Card 3</h2>
-                    <h6>Subtítulo</h6>
-                    <img src="../assets/imgs/imagen-producto.png" alt="Imagen del producto en venta">
-                </div>                
+                    <h2>Flash Market</h2>
+                    <h6>Competitivo</h6>
+                    <img src="../assets/imgs/imagen-card-flash.jpg" alt="Imagen del juego Flash Market">
+                </div> <!-- Fuente imagen https://unsplash.com/photos/graphical-user-interface-application-x07ELaNFt34 -->
                 <div class="card-producto-info"> <!--Información-->
                     <div class="card-producto-precio">
-                        <h5>Precio</h5>
-                        <a href="tienda.html">Ver más</a>
+                        <h5>CLP $20000</h5>
+                        <a class="disabled" href="tienda.html">Sin stock</a>
                     </div>
                     <p>
-                        Leyenda...
+                        ¿Puedes leer el mercado, tomar decisiones en segundos y arriesgar todo por una jugada brillante? Flash Market te reta a hacerlo... en tiempo real.
                     </p>
                 </div>
             </div>
             <div class="card-producto-content"> <!--Card 4-->                
                 <div class="card-producto-id"> <!--Identificador-->
-                    <h2>Card 4</h2>
-                    <h6>Subtítulo</h6>
-                    <img src="../assets/imgs/imagen-producto.png" alt="Imagen del producto en venta">
-                </div>                
+                    <h2>Torre de Problemas</h2>
+                    <h6>Party game</h6>
+                    <img src="../assets/imgs/imagen-card-torre.jpg" alt="Imagen que muestra el juego Torre de Problemas">
+                </div> <!-- Fuente de la imagen https://unsplash.com/photos/a-close-up-of-a-sticker-on-a-pole-gt6elEFm39k -->
                 <div class="card-producto-info"> <!--Información-->
                     <div class="card-producto-precio">
-                        <h5>Precio</h5>
-                        <a href="tienda.html">Ver más</a>
+                        <h5>CLP $8000</h5>
+                        <a class="disabled" href="tienda.html">Sin stock</a>
                     </div>
                     <p>
-                        Leyenda...
+                        ¿Quién dijo que el caos no podía tener método? En Torre de Problemas, de 2 a 5 jugadores intentan construir una torre funcional... con piezas que tienen condiciones absurdas, efectos inesperados y reglas que cambian en mitad de la partida.
                     </p>
                 </div>
             </div>
@@ -155,12 +157,12 @@
     </main>
     <footer> <!--Footer-->
         <section> <!--Logo y Redes--> 
-            <a href="../index.html"><img src="../assets/imgs/logo footer.png" alt="Logo"></a>
+            <a href="../index.html"><img src="../assets/imgs/logo-ludussus-footer.png" alt="Logo"></a>
             <div class="redes">
-                <img src="../assets/imgs/icon-tiktok.png" alt="Tik-Tok">
-                <img src="../assets/imgs/icon-facebook.png" alt="Facebook">
-                <img src="../assets/imgs/icon-whatsapp.png" alt="Whatsapp">
-                <img src="../assets/imgs/icons-insta.png" alt="Instagram">
+                <a target="_blank" href="https://www.tiktok.com/es/"><img src="../assets/imgs/icon-tiktok.png" alt="Tik-Tok"></a>
+                <a target="_blank" href="https://www.facebook.com/"><img src="../assets/imgs/icon-facebook.png" alt="Facebook"></a>
+                <a target="_blank" href="https://www.whatsapp.com/"><img src="../assets/imgs/icon-whatsapp.png" alt="Whatsapp"></a>
+                <a target="_blank" href="https://www.instagram.com/"><img src="../assets/imgs/icons-insta.png" alt="Instagram"></a>
             </div>
         </section>
         <section class="container-fluid"> <!--Accesos Directos-->
@@ -172,7 +174,7 @@
                 <li><a href="videoteca.html">Videoteca</a></li>
                 <li><a href="videoteca.html#videodestacado">Destacado</a></li>
                 <li><a href="tienda.html">Tienda</a></li>
-                <li><a href="tienda.html#terminos">Términos y Condiciones</a></li>
+                <li><a href="terminos.html">Términos y Condiciones</a></li>
             </ul>
         </section>
         <form class="mb-3">
