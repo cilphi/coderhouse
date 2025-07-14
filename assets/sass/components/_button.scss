@@ -1,0 +1,121 @@
+// Archivos importados en orden colors, variables, mixin
+@use "../abstracts/colors" as c;
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as *;
+
+/* Botones y Links estados link, visited, hover en fondo amarillo letra blanca y active en fondo anaranjado y letra blanca */
+// Clase de Bootstrap
+// fondo verde + letra blanca
+/*Botón de Bootstrap y card en inicio*/
+.btn {
+    padding: v.$padding_1;
+    border-radius: v.$radius_1;
+    border: c.$primary_2;
+    @include color_1;
+    transition: background-color 0.5s ease;
+    &:visited{
+        @include color_1;
+    }
+    &:hover{
+        @include color_3;
+    }
+    &:active {
+        @include color_4;
+    }
+}
+.card-index-content a{
+    @extend .btn;
+}
+/*Botón de los card de productos*/
+.card-producto-content a {
+    &:link{
+        @include color_1;
+        @include pbr_7;
+        transition: background-color 0.5s ease;
+    }
+    &:visited{
+        @include color_1;
+        @include pbr_7;
+    }
+    &:hover{
+        @include color_3;
+        @include pbr_7;
+    }
+    &:active {
+        @include color_4;
+        @include pbr_7;
+    }
+}
+/*Links con letra azul en todos sus estados*/
+// letra azul
+.navbar-light {
+    .navbar-nav {
+        .nav-link {
+            &:link {
+                @include color_2;
+            }
+            &:visited {
+                @include color_2;
+            }
+            &:hover {
+                @include color_3;
+            }
+            &:active {
+                @include color_4;
+            }
+        }
+    }
+}
+.breadcrumb {
+    a {
+        &:link {
+            @include color_2;
+        }
+        &:visited {
+            @include color_2;
+        }
+        &:hover {
+            @include color_3;
+        }
+        &:active {
+            @include color_4;
+        }
+    }
+}
+main {
+    section {
+        article {
+            a {
+                &:link {
+                    @include color_2;
+                }
+                &:visited {
+                    @include color_2;
+                }
+                &:hover {
+                    @include color_3;
+                }
+                &:active {
+                    @include color_4;
+                }
+            }
+        }
+    }
+}
+//Estados hover y active adicionales
+.nav-tabs{
+    li{
+        a{
+            &:hover {
+                @include color_3;
+            }
+            &:active {
+                @include color_4;
+            }
+        }
+    }
+}
+/*Estado Inactivo*/
+.inactive {
+    @include color_5;
+}

@@ -1,0 +1,142 @@
+// Archivos importados en orden colors, variables, mixin
+@use "../abstracts/colors" as c;
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as *;
+
+/*Card*/
+/*Todo el documento*/
+/*Formato Caja*/
+//Formatos exteriores
+//Caja sombreada
+//.card-box + .card-video-box + .card-producto-content
+.card-box {
+    max-width: 80vw;
+    @include pbr_2;
+    box-shadow: 0 2px 8px rgba(155,151,181, .2);
+    @include justali_2;
+    @include marg_1;
+}
+.card-video-box {
+    @extend .card-box;
+}
+.card-producto-content {
+    @extend .card-box;
+}
+
+/*Ancho de las imágenes y videos*/
+
+.card-index{
+    img {
+        @extend %ancho100;
+    }
+}
+.card-index-content {
+    img {
+        @extend %ancho100;
+    }
+}
+.card-video {
+    iframe {
+        @extend %ancho100;
+    }
+}
+.card-video-thumbnail {
+    iframe {
+        @extend %ancho100;
+    }
+}
+.card-producto-content {
+    img {
+        @extend %ancho100;
+    }
+}
+
+/*Pagina de Inicio*/
+/*Card inicio*/
+//Caja dentro de la caja
+.card-index {
+    @include flex_col_2;
+    @include pbr_3;
+    .card-index-content {
+        @include flex_nowrap;
+        a{
+            @include text_centrblock;
+        }
+    }
+}
+
+/*Pagina Conócenos*/
+/*Formato Id y Clase Cajas Grid*/
+//Cajas dentro de la caja
+.members {
+    @include grid;
+}
+#members {
+    @extend .members;
+}
+#card-producto {
+    @extend .members;
+}
+
+/*Pagina Biblioteca*/
+/*Formato Id Cajas*/
+//Caja dentro de la caja
+.f {
+    @include flex_col_2;
+    flex-wrap: wrap;
+    @include justali_3;
+    @include pgap_1;
+}
+
+/*Pagina Videoteca*/
+/*Formato Caja Video*/
+//Caja dentro de la caja
+.card-video-box{
+    @include flex_col_2;
+    .card-video2{
+        .video-sidebar {
+            @include flex_col_2;
+            padding: v.$padding_7;
+            max-height: 576px;
+            overflow-y: scroll;
+            .card-video-thumbnail{
+                @include flex_col_3;
+                p{
+                    @include white;
+                }
+            }
+        }
+    }
+}
+
+/*Pagina Tienda*/
+/*Formato Contenido Productos*/
+//Caja dentro de la caja
+.card-producto-content {
+    @include flex_col_3;
+    justify-content: flex-start;
+}
+.card-producto-info{
+    @include flex_col_1;
+    align-items: stretch;        
+}
+.card-producto-precio {
+    @include flex_row;
+    a{
+        @include pbr_7;
+    }
+    a.disabled {
+        &:link {
+            @extend %color6;
+        }
+        &:visited {
+            @extend %color6;
+        }
+        &:hover {
+            @extend %color6;
+        }
+        &:active {
+            @extend %color6;
+        }
+    }
+}

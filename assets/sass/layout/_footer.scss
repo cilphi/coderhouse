@@ -1,0 +1,41 @@
+// Archivos importados en orden colors, variables, mixin
+@use "../abstracts/colors" as c;
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as *;
+
+/*Footer*/
+footer {
+    background-color: c.$neutral_2;
+    @include flex_col_1;
+    @include justali_1;
+    padding: v.$padding_7;
+    section {
+        justify-self: center;
+        div {
+            justify-self: center;
+        }
+    }
+    section {
+        justify-self: center;
+        ul {
+            @include flex_wrap;
+            li {
+                padding: v.$padding_2;
+                a {
+                    &:link {
+                        @include color_2;
+                    }
+                    &:visited {
+                        @include color_2;
+                    }
+                    &:hover {
+                        @include color_3;
+                    }
+                    &:active {
+                        @include color_4;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,57 @@
+// Archivos importados
+@use "../abstracts/colors" as c;
+
+// Fuente
+$font_primary: "Akatab", sans-serif;
+$font_secondary: "Chocolate Classical Sans", sans-serif;
+
+//Peso
+$weight_bold: 700;
+$weight_regular: 400;
+
+/*Elementos*/
+h1 {
+    font-family: $font_primary;
+    font-weight: $weight_bold;
+    font-size: 2.027rem;
+    color: c.$secondary_1;
+}
+h2 {
+    font-family: $font_primary;
+    font-weight:$weight_bold;
+    font-size: 1.807rem;
+    color: c.$secondary_1;
+}
+h3 {
+    font-family: $font_primary;
+    font-weight: $weight_bold;
+    font-size: 1.602rem;
+    color: c.$secondary_1;
+}
+h4 {
+    font-family: $font_primary;
+    font-weight: $weight_bold;
+    font-size: 1.424rem;
+    color: c.$secondary_1;
+}
+h5 {
+    font-family: $font_primary;
+    font-weight: $weight_bold;
+    font-size: 1.266rem;
+    color: c.$secondary_1;
+}
+h6 {
+    font-family: $font_secondary;
+    font-weight: $weight_regular;
+    font-size: 1.125rem;
+    color: c.$neutral_3;
+}
+p {
+    font-family: $font_secondary;
+    font-weight: $weight_regular;
+    font-size: 1rem;
+    color: c.$secondary_2;
+}
+a {
+    @extend p;
+}

@@ -1,0 +1,29 @@
+// Archivos importados en orden colors, variables, mixin
+@use "../abstracts/colors" as c;
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as *;
+
+/*Main*/
+main {
+    gap: v.$gap_1;
+    margin: 24px 0;
+    section.breadcrumb {
+        @include flex_align;
+    }
+    section {
+        article {
+            ul {
+                li {
+                    list-style: square;
+                }
+            }
+        }
+    }
+}
+/*Gradiente con máscara de recorte en texto*/
+.span {
+    background-image: linear-gradient(to right, c.$secondary_2, c.$primary_1, c.$primary_2);
+    background-size: cover;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

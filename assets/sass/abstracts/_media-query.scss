@@ -1,0 +1,88 @@
+// Archivos importados en orden colors, variables, mixin
+@use "../abstracts/colors" as c;
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as *;
+
+
+//Medidas
+$breakpoint_medium: 600px;
+$breakpoint_large: 1024px;
+
+/* Media query para tabletas */
+@media (min-width: $breakpoint_medium) {
+    /*Formato Clase e Id para cajas grid*/
+    .members {
+        grid-template-columns: v.$col_2;
+    }
+    #members {
+        grid-template-columns: v.$col_2;
+    }
+    #card-producto {
+        grid-template-columns: v.$col_2;
+    }
+    .card-producto-info {
+        p {
+            white-space: wrap;
+        }
+    }
+    footer {
+        flex-direction: row;
+    }
+}
+
+/* Media query para pantallas grandes */
+@media (min-width: $breakpoint_large) {
+    .navbar-nav {
+        display: flex;
+        justify-content: space-around;
+    }
+    header {
+        nav {
+            div {
+                div {
+                    ul {
+                        ul {
+                            flex-direction: row;
+                            gap: v.$gap_3;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .dropdown-menu {
+        width: 300px;
+    }
+    .card-index{
+        flex-direction: row-reverse;
+    }
+    main {
+        section {
+            div {
+                p {
+                    white-space: wrap;
+                }
+            }
+        }
+    }
+    /*Formato Clase e Id para cajas grid*/
+    .members {
+        grid-template-columns: v.$col_3;
+    }
+    #members {
+        grid-template-columns: v.$col_3;
+    }
+    #card-producto {
+        grid-template-columns: v.$col_3;
+    }
+    .card-video-box {
+        flex-direction: row;
+    }
+    .card-video2{
+            width: 25%;            
+        }
+    iframe {
+        display: flex;
+        height: 100%;
+    }
+}

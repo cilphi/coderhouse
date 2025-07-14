@@ -1,0 +1,12 @@
+/*Comienzo de la migración del estilo desde sass a css*/
+
+//Importando archivos
+@use "./base/reset" as *;
+@use "./base/typography" as*;
+@use "./layout/header" as *;
+@use "./components/button" as *;
+@use "./layout/footer" as *;
+@use "./layout/main" as *;
+@use "./components/cards" as *;
+@use "./components/navtabs" as *;
+@use "./abstracts/media-query" as *;

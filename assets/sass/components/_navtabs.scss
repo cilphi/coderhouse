@@ -1,0 +1,70 @@
+// Archivos importados en orden colors, variables, mixin
+@use "../abstracts/colors" as c;
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as *;
+
+/*Página biblioteca*/
+//Ancho de las imágenes y videos
+#recomendacion1 {
+    img {
+        @extend %ancho100;
+    }
+}
+#recomendacion2 {
+    img {
+        @extend %ancho100;
+    }
+}
+#recomendacion3 {
+    img {
+        @extend %ancho100;
+    }
+}
+#recomendacion4 {
+    img {
+        @extend %ancho100;
+    }
+}
+#recomendacion5 {
+    img {
+        @extend %ancho100;
+    }
+}
+
+/*Formato de las Nav Tabs*/
+.nav-tabs {
+    border-bottom: transparent;
+    li{
+        @include pbr_4;
+    }
+    .nav-link {
+        @include flex_col_2;
+        @include pbr_5;
+        @include color_5;
+        border-bottom: c.$complementary_2;
+    }
+    .nav-link.active {
+        @extend .nav-tabs;
+        @include flex_col_2;
+        @include pbr_5;
+        @include color_4;
+        border: c.$complementary_2;
+    }
+}
+
+/*Formato Id tabs*/
+#recomendacion1 {
+    @extend %tabreco;
+}
+#recomendacion2 {
+    @extend %tabreco;
+}
+#recomendacion3 {
+    @extend %tabreco;
+}
+#recomendacion4 {
+    @extend %tabreco;
+}
+#recomendacion5 {
+    @extend %tabreco;
+}

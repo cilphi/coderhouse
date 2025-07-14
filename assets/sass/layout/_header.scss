@@ -1,0 +1,20 @@
+// Archivos importados en orden colors, variables, mixin
+@use "../abstracts/colors" as c;
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as *;
+
+/*Header*/
+header {
+    background-color: c.$neutral_2;
+    nav {
+        div {            
+            div {
+                ul {
+                    ul {
+                        flex-direction: column;                        
+                    }
+                }
+            }
+        }
+    }
+}

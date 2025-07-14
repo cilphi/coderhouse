@@ -1,0 +1,211 @@
+// Archivos importados
+@use "../abstracts/colors" as c;
+@use "../abstracts/variables" as v;
+
+//Link y visited btn
+@mixin color_1 {
+    background-color: c.$primary_2;
+    color: c.$neutral_1;
+}
+
+//Link y visited a
+@mixin color_2 {
+    color: c.$primary_1;
+}
+
+//Hover
+@mixin color_3 {
+    background-color: c.$complementary_1;
+    color: c.$neutral_1;
+}
+
+//Active
+@mixin color_4 {
+    background-color: c.$complementary_2;
+    color: c.$neutral_1;
+}
+
+//Inactivo
+@mixin color_5 {
+    background-color: c.$neutral_2;
+    color: c.$secondary_1;
+}
+
+//Margin
+@mixin marg_1 {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+//Padding y Border radius
+// .btn + .card-index-content a
+@mixin pbr_1 {
+    padding: v.$padding_1;
+    border-radius: v.$radius_1;
+}
+
+//.card-box + .card-video-box + .card-producto-content
+@mixin pbr_2 {
+    padding: v.$padding_4;
+    border-radius: v.$radius_2;
+}
+
+//.card-index
+@mixin pbr_3 {
+    padding: v.$padding_5;
+    border-radius: v.$radius_3;
+}
+
+//.nav-tabs li
+@mixin pbr_4 {
+    padding: v.$padding_6;
+    border-radius: v.$radius_4;
+}
+
+//.nav-link.active
+@mixin pbr_5 {
+    padding: v.$padding_2;
+    border-radius: v.$radius_4;
+}
+
+//#recomendacion1-5
+@mixin pbr_6 {
+    padding: v.$padding_2;
+    border-radius: v.$radius_2;
+}
+
+//.card-producto-precio a
+@mixin pbr_7 {
+    padding: v.$padding_2;
+    border-radius: v.$radius_1;
+}
+
+//Padding y Gap
+//.f
+@mixin pgap_1 {
+    padding: v.$padding_3;
+    gap: v.$gap_2;
+}
+
+//Selector
+//ancho imagen
+%ancho100 {
+    width: 100%;
+}
+
+//id biblioteca
+%tabreco {
+    @include pbr_6;
+    border: 2px solid c.$complementary_2;
+    background-color: c.$neutral_1;
+}
+
+//Disabled
+%color6 {
+    background-color: c.$neutral_2;
+    color: c.$secondary_3;
+}
+
+//White space
+//.card-video-thumbnail p + (extend) .card-producto-info p
+@mixin white {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: clip;
+}
+
+//Grid
+//#members + #card-producto + .members
+@mixin grid {
+    display: grid;
+    grid-template-columns: v.$col_1;
+    justify-content: space-around;
+    align-content: center;
+    gap: v.$gap_2;
+    padding: v.$padding_3;
+}
+
+//Flex Column
+//footer + .card-producto-info
+@mixin flex_col_1 {
+    display: flex;
+    flex-direction: column;
+}
+
+//.card-index +  .card-index-content + .f + .nav-link.active + .nav-link + .card-video-box + video-sidebar
+@mixin flex_col_2 {
+    display: flex;
+    flex-direction: column;
+    gap: v.$gap_2;
+}
+
+//.card-video-thumbnail + .card-producto-id + .card-producto-content
+@mixin flex_col_3 {
+    display: flex;
+    flex-direction: column;
+    gap: v.$gap_3;
+}
+
+//Flex wrap: footer section ul
+@mixin flex_wrap {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+//Flex nowrap: .card-index-content
+@mixin flex_nowrap {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: v.$gap_2;
+}
+
+//Flex row 
+@mixin flex_row {
+    display: flex;
+    flex-direction: row;
+    @include justali_4;
+    padding: v.$padding_8;
+}
+
+//Flex variantes
+@mixin flex_align {
+    display: flex;
+    align-items: center;
+    padding: v.$padding_3;
+    margin-bottom: 0;
+}
+
+//Justify + Align
+//footer
+@mixin justali_1 {
+    justify-content: space-around;
+    align-items: center;
+}
+
+//.card-box + .card-video-box + .card-producto-content
+@mixin justali_2 {
+    justify-content: center;
+    align-content: center;
+}
+
+//.f 
+@mixin justali_3 {
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+//.card-producto-precio 
+@mixin justali_4 {
+    justify-content: space-between;
+    align-items: center;
+}
+
+//Textos
+//vínculo botón: .card-index-content a
+@mixin text_centrblock {
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
+}
