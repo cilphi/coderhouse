@@ -12,10 +12,18 @@ main {
     }
     section {
         article {
-            ul {
+            h2 {
+                color: c.$neutral_3;
+            }
+            ol {
+                li{
+                    list-style: decimal;
+                }
+                ul {
                 li {
                     list-style: square;
                 }
+            }
             }
         }
     }
