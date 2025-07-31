@@ -16,6 +16,11 @@
     @include justali_2;
     @include marg_1;
 }
+.card-box:hover {
+    max-width: 75vw;
+    box-shadow: 4px 8px 32px rgba(155,151,181, .7);
+    transition: width 0.5s ease, background-color 1s ease;
+}
 .card-video-box {
     @extend .card-box;
 }
@@ -32,6 +37,11 @@
 }
 .card-index-content {
     img {
+        @extend %ancho100;
+    }
+}
+.card-index {    
+    iframe {
         @extend %ancho100;
     }
 }
