@@ -3,65 +3,57 @@
 @use "../abstracts/variables" as v;
 @use "../abstracts/mixins" as *;
 
-/* Botones y Links estados link, visited, hover en fondo amarillo letra blanca y active en fondo anaranjado y letra blanca */
+// Botones y Links estados link, visited, hover en fondo amarillo letra blanca y active en fondo anaranjado y letra blanca
 // Clase de Bootstrap
 // fondo verde + letra blanca
-/*Botón de Bootstrap y card en inicio*/
+
+//Botón de Bootstrap y card en inicio
 .btn {
-    padding: v.$padding_1;
-    border-radius: v.$radius_1;
-    border: c.$primary_2;
-    @include color_1;
-    transition: background-color 0.5s ease;
+    @extend %color1;
     &:visited{
-        @include color_1;
+        @extend %color1;
     }
     &:hover{
-        @include color_3;
+        @extend %color3;
     }
     &:active {
-        @include color_4;
+        @extend %color4;
     }
 }
 .card-index-content a{
     @extend .btn;
 }
-/*Botón de los card de productos*/
+//Botón de los card de productos
 .card-producto-content a {
     &:link{
-        @include color_1;
-        @include pbr_7;
-        transition: background-color 0.5s ease;
+        @extend %color1;
     }
     &:visited{
-        @include color_1;
-        @include pbr_7;
+        @extend %color1;
     }
     &:hover{
-        @include color_3;
-        @include pbr_7;
+        @extend %color3;
     }
     &:active {
-        @include color_4;
-        @include pbr_7;
+        @extend %color4;
     }
 }
-/*Links con letra azul en todos sus estados*/
+//Links con letra azul en todos sus estados
 // letra azul
 .navbar-light {
     .navbar-nav {
         .nav-link {
             &:link {
-                @include color_2;
+                @extend %color2;
             }
             &:visited {
-                @include color_2;
+                @extend %color2;
             }
             &:hover {
-                @include color_3;
+                @extend %color3;
             }
             &:active {
-                @include color_4;
+                @extend %color4;
             }
         }
     }
@@ -69,16 +61,16 @@
 .breadcrumb {
     a {
         &:link {
-            @include color_2;
+            @extend %color2;
         }
         &:visited {
-            @include color_2;
+            @extend %color2;
         }
         &:hover {
-            @include color_3;
+            @extend %color3;
         }
         &:active {
-            @include color_4;
+            @extend %color4;
         }
     }
 }
@@ -87,16 +79,16 @@ main {
         article {
             a {
                 &:link {
-                    @include color_2;
+                    @extend %color2;
                 }
                 &:visited {
-                    @include color_2;
+                    @extend %color2;
                 }
                 &:hover {
-                    @include color_3;
+                    @extend %color3;
                 }
                 &:active {
-                    @include color_4;
+                    @extend %color4;
                 }
             }
         }
@@ -107,10 +99,10 @@ main {
     li{
         a{
             &:hover {
-                @include color_3;
+                @extend %color3;
             }
             &:active {
-                @include color_4;
+                @extend %color4;
             }
         }
     }
@@ -118,4 +110,5 @@ main {
 /*Estado Inactivo*/
 .inactive {
     @include color_5;
+    font-weight: bold;
 }
