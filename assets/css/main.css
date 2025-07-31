@@ -65,20 +65,55 @@ p, a {
   color: #3D3A58;
 }
 
-#recomendacion1 img, #recomendacion2 img, #recomendacion3 img, #recomendacion4 img, #recomendacion5 img, .card-index img, .card-index-content img, .card-video iframe, .card-video-thumbnail iframe, .card-producto-content img {
-  width: 100%;
+/* Botones en estados link y visited */
+.btn, .btn:visited, .card-index-content a, .card-index-content a:visited, .card-producto-content a:link, .card-producto-content a:visited {
+  padding: 8px 32px;
+  border-radius: 16px;
+  border: #37AD72;
+  background-color: #37AD72;
+  color: #FCFCFE;
+  font-weight: bold;
+  transition: background-color 0.5s ease;
 }
 
+/*Hipervínculos en estados link y visited */
+footer section ul li a:link, footer section ul li a:visited, .navbar-light .navbar-nav .nav-link:link, .navbar-light .navbar-nav .nav-link:visited, .breadcrumb a:link, .breadcrumb a:visited, main section article a:link, main section article a:visited {
+  padding: 8px 32px;
+  border-radius: 16px;
+  color: #4537AD;
+}
+
+/*Estado hover*/
+footer section ul li a:hover, .btn:hover, .card-index-content a:hover, .card-producto-content a:hover, .navbar-light .navbar-nav .nav-link:hover, .breadcrumb a:hover, main section article a:hover, .nav-tabs li a:hover {
+  background-color: #AD9D37;
+  color: #FCFCFE;
+}
+
+/*Estado active*/
+footer section ul li a:active, .btn:active, .card-index-content a:active, .card-producto-content a:active, .navbar-light .navbar-nav .nav-link:active, .breadcrumb a:active, main section article a:active, .nav-tabs li a:active {
+  background-color: #AD6737;
+  color: #FCFCFE;
+}
+
+/*Estado deshabilitado*/
+.card-producto-precio a.disabled:link, .card-producto-precio a.disabled:visited, .card-producto-precio a.disabled:hover, .card-producto-precio a.disabled:active {
+  background-color: #ECEBF7;
+  color: #AD4537;
+  font-weight: bold;
+}
+
+/*Ancho de imágenes y videos*/
+#recomendacion1 img, #recomendacion2 img, #recomendacion3 img, #recomendacion4 img, #recomendacion5 img, .card-index img, .card-index-content img, .card-index iframe, .card-video iframe, .card-video-thumbnail iframe, .card-producto-content img {
+  width: 100%;
+  border-radius: 20px;
+}
+
+/*Formato texto recomendación*/
 #recomendacion1, #recomendacion2, #recomendacion3, #recomendacion4, #recomendacion5 {
   padding: 8px 16px;
   border-radius: 20px;
   border: 2px solid #AD6737;
   background-color: #FCFCFE;
-}
-
-.card-producto-precio a.disabled:link, .card-producto-precio a.disabled:visited, .card-producto-precio a.disabled:hover, .card-producto-precio a.disabled:active {
-  background-color: #ECEBF7;
-  color: #4D4C5B;
 }
 
 /*Header*/
@@ -89,115 +124,11 @@ header nav div div ul ul {
   flex-direction: column;
 }
 
-/* Botones y Links estados link, visited, hover en fondo amarillo letra blanca y active en fondo anaranjado y letra blanca */
-/*Botón de Bootstrap y card en inicio*/
-.btn, .card-index-content a {
-  padding: 8px 32px;
-  border-radius: 16px;
-  border: #37AD72;
-  background-color: #37AD72;
-  color: #FCFCFE;
-  transition: background-color 0.5s ease;
-}
-.btn:visited, .card-index-content a:visited {
-  background-color: #37AD72;
-  color: #FCFCFE;
-}
-.btn:hover, .card-index-content a:hover {
-  background-color: #AD9D37;
-  color: #FCFCFE;
-}
-.btn:active, .card-index-content a:active {
-  background-color: #AD6737;
-  color: #FCFCFE;
-}
-
-/*Botón de los card de productos*/
-.card-producto-content a:link {
-  background-color: #37AD72;
-  color: #FCFCFE;
-  padding: 8px 16px;
-  border-radius: 16px;
-  transition: background-color 0.5s ease;
-}
-.card-producto-content a:visited {
-  background-color: #37AD72;
-  color: #FCFCFE;
-  padding: 8px 16px;
-  border-radius: 16px;
-}
-.card-producto-content a:hover {
-  background-color: #AD9D37;
-  color: #FCFCFE;
-  padding: 8px 16px;
-  border-radius: 16px;
-}
-.card-producto-content a:active {
-  background-color: #AD6737;
-  color: #FCFCFE;
-  padding: 8px 16px;
-  border-radius: 16px;
-}
-
-/*Links con letra azul en todos sus estados*/
-.navbar-light .navbar-nav .nav-link:link {
-  color: #4537AD;
-}
-.navbar-light .navbar-nav .nav-link:visited {
-  color: #4537AD;
-}
-.navbar-light .navbar-nav .nav-link:hover {
-  background-color: #AD9D37;
-  color: #FCFCFE;
-}
-.navbar-light .navbar-nav .nav-link:active {
-  background-color: #AD6737;
-  color: #FCFCFE;
-}
-
-.breadcrumb a:link {
-  color: #4537AD;
-}
-.breadcrumb a:visited {
-  color: #4537AD;
-}
-.breadcrumb a:hover {
-  background-color: #AD9D37;
-  color: #FCFCFE;
-}
-.breadcrumb a:active {
-  background-color: #AD6737;
-  color: #FCFCFE;
-}
-
-main section article a:link {
-  color: #4537AD;
-}
-main section article a:visited {
-  color: #4537AD;
-}
-main section article a:hover {
-  background-color: #AD9D37;
-  color: #FCFCFE;
-}
-main section article a:active {
-  background-color: #AD6737;
-  color: #FCFCFE;
-}
-
-.nav-tabs li a:hover {
-  background-color: #AD9D37;
-  color: #FCFCFE;
-}
-.nav-tabs li a:active {
-  background-color: #AD6737;
-  color: #FCFCFE;
-}
-
 /*Estado Inactivo*/
 .inactive {
   background-color: #ECEBF7;
   color: #2E2D38;
+  font-weight: bold;
 }
 
 /*Footer*/
@@ -226,21 +157,6 @@ footer section ul {
 footer section ul li {
   padding: 8px 16px;
 }
-footer section ul li a:link {
-  color: #4537AD;
-}
-footer section ul li a:visited {
-  color: #4537AD;
-}
-footer section ul li a:hover {
-  background-color: #AD9D37;
-  color: #FCFCFE;
-}
-footer section ul li a:active {
-  background-color: #AD6737;
-  color: #FCFCFE;
-}
-
 /*Main*/
 main {
   gap: 24px;
@@ -252,7 +168,13 @@ main section.breadcrumb {
   padding: 0 16px;
   margin-bottom: 0;
 }
-main section article ul li {
+main section article h2 {
+  color: #9B97B5;
+}
+main section article ol li {
+  list-style: decimal;
+}
+main section article ol ul li {
   list-style: square;
 }
 
@@ -276,6 +198,12 @@ main section article ul li {
   align-content: center;
   margin-left: auto;
   margin-right: auto;
+}
+
+.card-box:hover, .card-producto-content:hover, .card-video-box:hover {
+  max-width: 75vw;
+  box-shadow: 4px 8px 32px rgba(155, 151, 181, 0.7);
+  transition: width 0.5s ease, background-color 1s ease;
 }
 
 /*Ancho de las imágenes y videos*/
