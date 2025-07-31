@@ -42,6 +42,7 @@
 @mixin pbr_1 {
     padding: v.$padding_1;
     border-radius: v.$radius_1;
+    font-weight: bold;
 }
 
 //.card-box + .card-video-box + .card-producto-content
@@ -88,22 +89,61 @@
 }
 
 //Selector
+/* Botones en estados link y visited */
+//Boton verde
+%color1 {
+    padding: v.$padding_1;
+    border-radius: v.$radius_1;
+    border: c.$primary_2;
+    background-color: c.$primary_2;
+    color: c.$neutral_1;
+    font-weight: bold;
+    transition: background-color 0.5s ease;
+}
+/*Hipervínculos en estados link y visited */
+//link azul
+
+%color2 {
+    padding: v.$padding_1;    
+    border-radius: v.$radius_1;
+    color: c.$primary_1;
+}
+
+/*Estado hover*/
+//hover
+%color3 {
+    background-color: c.$complementary_1;
+    color: c.$neutral_1;
+}
+
+/*Estado active*/
+//active
+%color4 {
+    background-color: c.$complementary_2;
+    color: c.$neutral_1;
+}
+
+/*Estado deshabilitado*/
+//Disabled
+%color6 {
+    background-color: c.$neutral_2;
+    color: c.$complementary_3;
+    font-weight: bold;
+}
+
+/*Ancho de imágenes y videos*/
 //ancho imagen
 %ancho100 {
     width: 100%;
+    border-radius: v.$radius_2;
 }
 
+/*Formato texto recomendación*/
 //id biblioteca
 %tabreco {
     @include pbr_6;
     border: 2px solid c.$complementary_2;
     background-color: c.$neutral_1;
-}
-
-//Disabled
-%color6 {
-    background-color: c.$neutral_2;
-    color: c.$secondary_3;
 }
 
 //White space
