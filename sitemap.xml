@@ -1,43 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?> 
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"> 
 <url>
-  <loc>http://cilphi.github.io/index.html</loc>
+  <loc>https://cilphi.github.io/coderhouse/index.html</loc>
   <lastmod>2025-07-31</lastmod>
 </url>
 <url>
-  <loc>http://cilphi.github.io/pages/conocenos.html</loc>
+  <loc>https://cilphi.github.io/coderhouse/pages/conocenos.html</loc>
   <lastmod>2025-07-31</lastmod>
 </url>
 <url>
-  <loc>http://cilphi.github.io/pages/biblioteca.html</loc>
+  <loc>https://cilphi.github.io/coderhouse/pages/biblioteca.html</loc>
   <lastmod>2025-07-31</lastmod>
 </url>
 <url>
-  <loc>http://cilphi.github.io/pages/videoteca.html</loc>
+  <loc>https://cilphi.github.io/coderhouse/pages/videoteca.html</loc>
   <lastmod>2025-07-31</lastmod>
 </url>
 <url>
-  <loc>http://cilphi.github.io/pages/tienda.html</loc>
+  <loc>https://cilphi.github.io/coderhouse/pages/tienda.html</loc>
   <lastmod>2025-07-31</lastmod>
 </url>
 <url>
-  <loc>http://cilphi.github.io/pages/conocenos.html#members</loc>
+  <loc>https://cilphi.github.io/coderhouse/pages/terminos.html</loc>
   <lastmod>2025-07-31</lastmod>
 </url>
 <url>
-  <loc>http://cilphi.github.io/pages/biblioteca.html#recomendaciones</loc>
-  <lastmod>2025-07-31</lastmod>
-</url>
-<url>
-  <loc>http://cilphi.github.io/pages/videoteca.html#videodestacado</loc>
-  <lastmod>2025-07-31</lastmod>
-</url>
-<url>
-  <loc>http://cilphi.github.io/pages/terminos.html</loc>
-  <lastmod>2025-07-31</lastmod>
-</url>
-<url>
-  <loc>http://cilphi.github.io/</loc>
+  <loc>https://cilphi.github.io/coderhouse</loc>
   <lastmod>2025-07-31</lastmod>
 </url>
 </urlset>
