@@ -23,16 +23,16 @@ footer {
                 padding: v.$padding_2;
                 a {
                     &:link {
-                        @include color_2;
+                        @extend %color2;
                     }
                     &:visited {
-                        @include color_2;
+                        @extend %color2;
                     }
                     &:hover {
-                        @include color_3;
+                        @extend %color3;
                     }
                     &:active {
-                        @include color_4;
+                        @extend %color4;
                     }
                 }
             }
